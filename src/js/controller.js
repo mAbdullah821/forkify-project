@@ -13,8 +13,6 @@ import {
 } from './config.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-// import icons from 'url:../../img/icons.svg'; // Parcel 2
-// const recipeContainer = document.querySelector('.recipe');
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -32,9 +30,7 @@ const recipeController = async function () {
     recipeView.loadData(model.state.recipe);
     recipeView.renderRecipe();
   } catch (err) {
-    // console.error(err.message);
     recipeView.renderErrorMessage();
-    // recipeView.resetRecipeContainer();
   }
 };
 
@@ -74,12 +70,6 @@ const searchResultController = async function () {
     resultView.renderErrorMessage();
   }
 };
-
-// const resultController = function () {
-//   const id = window.location.hash.slice(1);
-//   if (!id) return;
-//   return id;
-// };
 
 const paginationController = function (page) {
   resultView.loadData(model.getRecipesOfPage(page));
@@ -140,10 +130,6 @@ const uploadRecipeController = async function (formData) {
     uploadRecipeView.renderErrorMessage();
     autoHideUploadRecipeForm();
   }
-};
-
-const sayWelcome = function () {
-  console.log('Welcome! :)');
 };
 
 const init = function () {
