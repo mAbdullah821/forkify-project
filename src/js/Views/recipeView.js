@@ -1,7 +1,6 @@
 import View from './view.js';
 import icons from 'url:../../img/icons.svg';
 import { decimalToFraction } from '../helpers.js';
-import { Fraction } from 'fractional';
 
 class RecipeView extends View {
   _container = document.querySelector('.recipe');

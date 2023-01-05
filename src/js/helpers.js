@@ -21,6 +21,14 @@ export const callAJAX = async function (url, options = {}) {
   }
 };
 
+// A helper function to calculate the greatest common divisor of two numbers
+const getGCD = function (a, b) {
+  if (b === 0) {
+    return a;
+  }
+  return getGCD(b, a % b);
+};
+
 export const decimalToFraction = function (decimal) {
   // Convert the decimal to a string
   const decimalString = decimal.toFixed(DECIMAL_NUMBER_COUNT).toString();
@@ -48,12 +56,4 @@ export const decimalToFraction = function (decimal) {
   return `${Number.parseInt(numerator / denominator)} ${
     numerator % denominator
   }/${denominator}`;
-};
-
-// A helper function to calculate the greatest common divisor of two numbers
-const getGCD = function (a, b) {
-  if (b === 0) {
-    return a;
-  }
-  return getGCD(b, a % b);
 };
