@@ -1,5 +1,6 @@
 import View from './view.js';
 import icons from 'url:../../img/icons.svg';
+import { decimalToFraction } from '../helpers.js';
 import { Fraction } from 'fractional';
 
 class RecipeView extends View {
@@ -78,11 +79,10 @@ class RecipeView extends View {
 
   // MARK: Generate Html Content Part
   _toFraction(num) {
-    try {
-      return num ? new Fraction(num).toString() : '';
-    } catch (err) {
-      return num.toFixed(1);
-    }
+    // const res = num ? decimalToFraction(num) : '';
+    // console.log(res);
+    // return num ? new Fraction(num).toString() : '';
+    return num ? decimalToFraction(num) : '';
   }
 
   _generateIngredientHtmlContnet(ingredient) {
