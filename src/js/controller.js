@@ -141,6 +141,11 @@ const uploadRecipeController = async function (formData) {
     autoHideUploadRecipeForm();
   }
 };
+
+const sayWelcome = function () {
+  console.log('Welcome! :)');
+};
+
 const init = function () {
   recipeView.addRenderRecipeHandler(recipeController);
   recipeView.addUpdateServingsHandler(servingsController);
@@ -149,13 +154,7 @@ const init = function () {
   bookmarkView.addBookmarksHandler(renderLocalStorageBookmarksController);
   paginationView.addPaginationHandler(paginationController);
   uploadRecipeView.addUploadRecipeHandler(uploadRecipeController);
+  sayWelcome;
 };
 
 init();
-
-// recipeController();
-// ['hashchange', 'load'].forEach(e =>
-//   window.addEventListener(e, () =>
-//     recipeController(window.location.hash.slice(1))
-//   )
-// );
