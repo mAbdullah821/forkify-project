@@ -154,7 +154,6 @@ const init = function () {
   bookmarkView.addBookmarksHandler(renderLocalStorageBookmarksController);
   paginationView.addPaginationHandler(paginationController);
   uploadRecipeView.addUploadRecipeHandler(uploadRecipeController);
-  sayWelcome;
 };
 
 init();
