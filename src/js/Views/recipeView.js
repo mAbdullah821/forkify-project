@@ -1,6 +1,6 @@
 import View from './view.js';
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from 'fractional';
+// import { Fraction } from 'fractional';
 
 class RecipeView extends View {
   _container = document.querySelector('.recipe');
@@ -78,7 +78,8 @@ class RecipeView extends View {
 
   // MARK: Generate Html Content Part
   _toFraction(num) {
-    return num ? new Fraction(num).toString() : '';
+    // return num ? new Fraction(num).toString() : '';
+    return num.toFixed(1);
   }
 
   _generateIngredientHtmlContnet(ingredient) {
