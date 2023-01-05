@@ -79,9 +79,6 @@ class RecipeView extends View {
 
   // MARK: Generate Html Content Part
   _toFraction(num) {
-    // const res = num ? decimalToFraction(num) : '';
-    // console.log(res);
-    // return num ? new Fraction(num).toString() : '';
     return num ? decimalToFraction(num) : '';
   }
 
