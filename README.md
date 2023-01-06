@@ -12,6 +12,8 @@ This project is a tool that allows users to search for and bookmark their favori
 
 ## Additional info
 
+I only implemented the '.js' files.
+
 Used pattern: MVC
 
 Link to the deployed forkify Project: [forkify Project](https://forkify-mahmoud-abdullah.netlify.app/)
